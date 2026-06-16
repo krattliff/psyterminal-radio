@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PsyTerminal Radio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<h2 class="sr-only">PsyTerminal Radio — DJ mix archive and upload platform</h2>
+
+<div class="page-body">
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      PSY<span class="logo-cursor"></span>TERMINAL
+    </div>
+    <ul class="nav-links">
+      <li><a href="#mixes">Mixes</a></li>
+      <li><a href="#upload">Upload</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <button class="nav-upload" onclick="document.getElementById('upload').scrollIntoView({behavior:'smooth'})">+ Upload mix</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">Transmission active</div>
+    <h1>
+      Psy<br>
+      <span>Terminal</span>
+      Radio
+    </h1>
+    <p class="hero-sub">// A signal from the underground. Deep psychedelic transmissions, archived and broadcast continuously.</p>
+    <div class="hero-grid-deco" aria-hidden="true">
+      <span>01</span><span>10</span><span>11</span><span>00</span><span>01</span><span>11</span><span>00</span><span>10</span>
+      <span>11</span><span>00</span><span>01</span><span>10</span><span>11</span><span>00</span><span>01</span><span>10</span>
+      <span>00</span><span>01</span><span>10</span><span>11</span><span>00</span><span>01</span><span>11</span><span>00</span>
+      <span>10</span><span>11</span><span>00</span><span>01</span><span>10</span><span>11</span><span>00</span><span>01</span>
+    </div>
+  </section>
+
+  <!-- SIGNAL BAR -->
+  <div class="signal-bar" aria-label="Now broadcasting">
+    <span class="signal-label">&#x25CF; Live</span>
+    <div class="signal-ticker" aria-hidden="true">
+      <span><em>Now playing:</em> TRANSMISSION 047 — Full Moon Forest Set</span>
+      <span>—</span>
+      <span><em>Duration:</em> 2h 14min</span>
+      <span>—</span>
+      <span><em>BPM range:</em> 138–148</span>
+      <span>—</span>
+      <span><em>Genre:</em> Psytrance / Progressive</span>
+      <span>—</span>
+      <span><em>Now playing:</em> TRANSMISSION 047 — Full Moon Forest Set</span>
+      <span>—</span>
+      <span><em>Duration:</em> 2h 14min</span>
+      <span>—</span>
+      <span><em>BPM range:</em> 138–148</span>
+      <span>—</span>
+      <span><em>Genre:</em> Psytrance / Progressive</span>
+    </div>
+  </div>
+
+  <!-- MIXES -->
+  <div class="section-header" id="mixes">
+    <span class="section-title">// Transmissions archive</span>
+    <span class="section-count" id="mix-count">6 mixes</span>
+  </div>
+
+  <ul class="mixes-list" id="mix-list"></ul>
+
+  <!-- UPLOAD -->
+  <section class="upload-section" id="upload">
+    <div class="about-label">// Upload a transmission</div>
+    <div class="upload-zone" id="upload-zone" role="button" tabindex="0" aria-label="Upload a mix file">
+      <div class="upload-icon" aria-hidden="true">&#x2191;</div>
+      <h3>Drop your mix here</h3>
+      <p>Or click to select a file from your machine</p>
+      <div class="upload-formats" aria-label="Accepted formats">
+        <span class="fmt-badge">MP3</span>
+        <span class="fmt-badge">WAV</span>
+        <span class="fmt-badge">FLAC</span>
+        <span class="fmt-badge">AIFF</span>
+      </div>
+    </div>
+    <input type="file" id="file-input" accept=".mp3,.wav,.flac,.aiff">
+    <div id="upload-status"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <div class="about-row" id="about">
+    <div class="about-col">
+      <div class="about-label">// The signal</div>
+      <p class="about-text">PsyTerminal Radio is an underground archive of psychedelic transmissions. Each mix is a journey — from the forest floor to deep space and back. No algorithms, no playlists. Just the signal.</p>
+    </div>
+    <div class="about-col">
+      <div class="about-label">// Frequencies</div>
+      <p class="about-text">Broadcasting psytrance, progressive, dark techno, and ambient experiments. New transmissions uploaded continuously. Keep your frequencies tuned.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-copy">&copy; 2026 PsyTerminal Radio. Signal transmitted from Portland, OR.</span>
+    <div class="footer-links">
+      <a href="#">Mixcloud</a>
+      <a href="#">Soundcloud</a>
+      <a href="#">Bandcamp</a>
+    </div>
+  </footer>
+
+</div>
+
+<!-- STICKY PLAYER -->
+<div class="player-bar" role="region" aria-label="Now playing">
+  <div class="player-track">
+    <span class="player-title" id="player-title">Transmission 047 — Full Moon Forest Set</span>
+    <span class="player-meta" id="player-genre">Psytrance</span>
+  </div>
+  <div class="player-controls">
+    <button class="ctrl-btn" aria-label="Previous">&#x23EE;</button>
+    <button class="ctrl-btn play-main" id="play-btn" aria-label="Play/Pause">&#9654;</button>
+    <button class="ctrl-btn" aria-label="Next">&#x23ED;</button>
+    <div class="viz-bars" id="viz" style="display:none" aria-hidden="true">
+      <div class="viz-bar" style="animation-delay:0s;height:8px"></div>
+      <div class="viz-bar" style="animation-delay:0.1s;height:14px"></div>
+      <div class="viz-bar" style="animation-delay:0.2s;height:10px"></div>
+      <div class="viz-bar" style="animation-delay:0.3s;height:16px"></div>
+      <div class="viz-bar" style="animation-delay:0.15s;height:12px"></div>
+    </div>
+  </div>
+  <div class="player-progress">
+    <span class="prog-time" id="prog-time">0:32:15 / 2:14:07</span>
+    <div class="prog-track" role="progressbar" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100" aria-label="Playback progress">
+      <div class="prog-fill" id="prog-fill"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-header">
+      <div class="modal-num" id="modal-num"></div>
+      <div>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <div class="modal-meta" id="modal-meta"></div>
+      </div>
+      <span class="mix-tag" id="modal-tag"></span>
+    </div>
+    <p class="modal-description" id="modal-description"></p>
+    <div class="modal-tracklist-header">
+      <span class="section-title">// Tracklist</span>
+      <span class="section-count" id="modal-track-count"></span>
+    </div>
+    <ol class="modal-tracklist" id="modal-tracklist"></ol>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
