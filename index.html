@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<h2 class="sr-only">PsyTerminal Radio — DJ mix archive and upload platform</h2>
+<h2 class="sr-only">PsyTerminal Radio — DJ mixes from Snorlinky</h2>
 
 <div class="page-body">
 
@@ -19,7 +19,7 @@
     </div>
     <ul class="nav-links">
       <li><a href="#mixes">Mixes</a></li>
-      <li><a href="#upload">Upload</a></li>
+      <li><a href="upload.html">Upload</a></li>
       <li><a href="#about">About</a></li>
     </ul>
     <button class="nav-upload" onclick="document.getElementById('upload').scrollIntoView({behavior:'smooth'})">+ Upload mix</button>
@@ -72,42 +72,26 @@
 
   <ul class="mixes-list" id="mix-list"></ul>
 
-  <!-- UPLOAD -->
-  <section class="upload-section" id="upload">
-    <div class="about-label">// Upload a transmission</div>
-    <div class="upload-zone" id="upload-zone" role="button" tabindex="0" aria-label="Upload a mix file">
-      <div class="upload-icon" aria-hidden="true">&#x2191;</div>
-      <h3>Drop your mix here</h3>
-      <p>Or click to select a file from your machine</p>
-      <div class="upload-formats" aria-label="Accepted formats">
-        <span class="fmt-badge">MP3</span>
-        <span class="fmt-badge">WAV</span>
-        <span class="fmt-badge">FLAC</span>
-        <span class="fmt-badge">AIFF</span>
-      </div>
-    </div>
-    <input type="file" id="file-input" accept=".mp3,.wav,.flac,.aiff">
-    <div id="upload-status"></div>
-  </section>
 
   <!-- ABOUT -->
   <div class="about-row" id="about">
     <div class="about-col">
       <div class="about-label">// The signal</div>
-      <p class="about-text">PsyTerminal Radio is an underground archive of psychedelic transmissions. Each mix is a journey — from the forest floor to deep space and back. No algorithms, no playlists. Just the signal.</p>
+      <p class="about-text">PsyTerminal Radio is an underground archive of psychedelic transmissions. Each mix is a journey — from the forest floor to deep space and back. No algorithms, no playlists. Just the signal. No Guarantees. Not every transiation is a smooth one.</p>
     </div>
     <div class="about-col">
       <div class="about-label">// Frequencies</div>
-      <p class="about-text">Broadcasting psytrance, progressive, dark techno, and ambient experiments. New transmissions uploaded continuously. Keep your frequencies tuned.</p>
+      <p class="about-text">Broadcasting psytrance, progressive house, trippy techno, and ambient experiments. New transmissions uploaded continuously. Keep your frequencies tuned.</p>
     </div>
   </div>
 
   <footer class="footer">
     <span class="footer-copy">&copy; 2026 PsyTerminal Radio. Signal transmitted from Portland, OR.</span>
     <div class="footer-links">
-      <a href="#">Mixcloud</a>
-      <a href="#">Soundcloud</a>
-      <a href="#">Bandcamp</a>
+      <a href="https://www.instagram.com/ruserious1008" target="_blank">IG</a>
+      <a href="https://music.youtube.com/channel/UCfolPUjMjyLpGeXDe0cwVMw" target="_blank">YouTube</a>
+      <a href="https://www.twitch.tv/djsnorlinky" target="_blank">Twitch</a>
+      <a href="https://krattliff.github.io" target="_blank">Back to the mothership</a>
     </div>
   </footer>
 
