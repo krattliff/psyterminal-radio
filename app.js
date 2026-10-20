@@ -7,7 +7,8 @@ const MIXES = [
     id: "001",
 title: "Psyterminal New Year Mix",
 date: "2025-01-12",
-bpm: "125",
+bpm: "125 BPM",
+duration: "1:03:14",
 genre: "Progressive House | Deep House",
 tagClass: "tag-progressive",
 description:
@@ -230,7 +231,7 @@ function handleRowClick(e, id) {
 /* ---- PLAYER ---- */
 
 let playing = false;
-let currentId = "047";
+let currentId = "077";
 
 function selectMix(id) {
   currentId = id;

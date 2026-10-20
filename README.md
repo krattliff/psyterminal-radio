@@ -1,6 +1,6 @@
 # PsyTerminal Radio
 
-A dark, minimal DJ mix archive and broadcast site. Upload your mixes, browse the transmission archive, and share tracklists.
+A dark, minimal DJ mix archive and broadcast site.
 
 Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build step. Deploy anywhere.
 
@@ -122,4 +122,4 @@ Drag the project folder into [netlify.com/drop](https://netlify.com/drop) or con
 
 ## License
 
-MIT — do whatever you like with it.
+MIT — do whatever you like with it. Give credit.
