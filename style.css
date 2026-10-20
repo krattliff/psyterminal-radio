@@ -341,6 +341,8 @@ nav {
 .tag-techno      { border-color: #FF4B6E; color: #FF4B6E; }
 .tag-progressive { border-color: var(--accent2); color: var(--accent2); }
 .tag-ambient     { border-color: #6688FF; color: #6688FF; }
+.tag-house     { border-color: #6688FF; color: #6688FF; }
+.tag-trance     { border-color: var(--accent); color: var(--accent); }
 
 .mix-right {
   display: flex;
